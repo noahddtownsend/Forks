@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Forks</string>
+    <string name="org_name">Org Name</string>
+    <string name="star_count">Star count</string>
+    <string name="loading_message">Fetching info from GitHub</string>
+    <string name="network_error">There was an issue getting info from GitHub</string>
+    <string name="unknown_org">Unknown GitHub Org \"%s\"</string>
+    <string name="no_repos">%s doesn\'t have any\npublic repos on GitHub</string>
+    <string name="search">Search</string>
+</resources>

@@ -1,0 +1,12 @@
+package com.noahtownsend.forks.constants
+
+val FIRST_PAGE = "[{\"id\":590289,\"name\":\"foo\",\"description\":\"Lorem ipsum dolor sit amet\",\"html_url\":\"https://www.example.github.com/\",\"stargazers_count\":8},{\"id\":590290,\"name\":\"bar\",\"description\":\"Lorem ipsum dolor sit amet\",\"html_url\":\"https://www.example.github.com/\",\"stargazers_count\":90},{\"id\":590291,\"name\":\"baz\",\"description\":\"Lorem ipsum dolor sit amet\",\"html_url\":\"https://www.example.github.com/\",\"stargazers_count\":9},{\"id\":590292,\"name\":\"qux\",\"description\":\"Lorem ipsum dolor sit amet\",\"html_url\":\"https://www.example.github.com/\",\"stargazers_count\":150}]"
+val SECOND_PAGE = "[{\"id\":690289,\"name\":\"quuz\",\"description\":\"Lorem ipsum dolor sit amet\",\"html_url\":\"https://www.example.github.com/\",\"stargazers_count\":42}]"
+val ALL_PAGES_EXPECTED = "[${SECOND_PAGE.subSequence(1, SECOND_PAGE.length - 1)},${FIRST_PAGE.subSequence(1, FIRST_PAGE.length - 1)}]"
+
+val ORG_INFO =
+    "{ \"login\": \"nytimes\", \"id\": 221409, \"node_id\": \"MDEyOk9yZ2FuaXphdGlvbjIyMTQwOQ==\", \"url\": \"https://api.github.com/orgs/nytimes\", \"repos_url\": \"https://api.github.com/orgs/nytimes/repos\", \"events_url\": \"https://api.github.com/orgs/nytimes/events\", \"hooks_url\": \"https://api.github.com/orgs/nytimes/hooks\", \"issues_url\": \"https://api.github.com/orgs/nytimes/issues\", \"members_url\": \"https://api.github.com/orgs/nytimes/members{/member}\", \"public_members_url\": \"https://api.github.com/orgs/nytimes/public_members{/member}\", \"avatar_url\": \"https://avatars.githubusercontent.com/u/221409?v=4\", \"description\": \"\", \"name\": \"The New York Times\", \"company\": null, \"blog\": \"https://nytimes.com\", \"location\": \"New York, NY\", \"email\": null, \"twitter_username\": null, \"is_verified\": true, \"has_organization_projects\": true, \"has_repository_projects\": true, \"public_repos\": 88, \"public_gists\": 1, \"followers\": 0, \"following\": 0, \"html_url\": \"https://github.com/nytimes\", \"created_at\": \"2010-03-12T16:14:34Z\", \"updated_at\": \"2021-03-22T12:53:00Z\", \"type\": \"Organization\" }"
+
+val ORG_NAME = "nytimes"
+
+val REPOS_URL = "https://api.github.com/orgs/${ORG_NAME}/repos?per_page=100&page="

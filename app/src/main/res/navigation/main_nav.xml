@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/search_screen">
+
+    <fragment
+        android:id="@+id/search_screen"
+        android:name="com.noahtownsend.forks.ui.SearchScreen"
+        android:label="search_screen_fragment"
+        tools:layout="@layout/search_screen_fragment" >
+        <action
+            android:id="@+id/action_search_screen_to_reposList"
+            app:destination="@id/reposList"
+            app:popUpTo="@id/search_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/reposList"
+        android:name="com.noahtownsend.forks.ui.ReposList"
+        android:label="repos_list_fragment"
+        tools:layout="@layout/repos_list_fragment" >
+        <argument
+            android:name="orgName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_reposList_to_search_screen"
+            app:destination="@id/search_screen"
+            app:popUpTo="@id/search_screen" />
+    </fragment>
+</navigation>
